@@ -42,11 +42,14 @@ Nonfunctional Requirements:
 
 Artifacts to Produce:
 
-* Requirements Document: Many functional and nonfunctional requirements needs
-	to be defined. You must define additional requirements that are
-	reasonable and document them in a requirements document. I must review
-	your requirements document before you start the design document or test
-	plan. You may change the requirements document throughout development.
+* Requirements Document: 
+
+* The grid will be 30x30 cells. Live cells will be filled in and dead cells will be
+* just white. There will be multiple Glider ships interacting with Beacons, Blinkers
+* and Blocks. It should run for around 30 generations (I haven't completely decided yet).
+* The time interval between generations will be about a third of a second? The edges don't
+* wrap around.
+
 * Design Document: You must do some design activity before starting
 	implementation. This may consist of a flow cart, pseudocode, or other
 	design artifact. I must review your design document before you start
