@@ -51,7 +51,7 @@ Artifacts to Produce:
 * wrap around.
 
 * Design Document: You must do some design activity before starting
-	implementation. This may consist of a flow cart, pseudocode, or other
+	implementation. This may consist of a flow chart, pseudocode, or other
 	design artifact. I must review your design document before you start
 	implementing code. You may change your design document throughout
 	development.
