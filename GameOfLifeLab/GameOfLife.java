@@ -64,7 +64,7 @@ public class GameOfLife
         Grid<Actor> grid = world.getGrid();
 
         // create and add rocks (a type of Actor) to the three intial locations
-        
+
         Rock rock1 = new Rock();
         Location loc1 = new Location(X1,Y1);
         grid.put(loc1 /*change this*/, rock1);
@@ -76,11 +76,11 @@ public class GameOfLife
         Rock rock3 = new Rock();
         Location loc3 = new Location(X3,Y3);
         grid.put(loc3, rock3);
-        
+
         Rock rock4 = new Rock();
         Location loc4 = new Location(X4,Y4);
         grid.put(loc4, rock4);
-        
+
         Rock rock5 = new Rock();
         Location loc5 = new Location(X5,Y5);
         grid.put(loc5, rock5);
@@ -109,7 +109,7 @@ public class GameOfLife
             {
                 Location loc = new Location(x,y);
                 int neighbors = grid.getNeighbors(loc).size();
-                
+
                 if((neighbors < 2) || (neighbors > 3))
                 {
                     grid.remove(loc);
@@ -119,10 +119,10 @@ public class GameOfLife
                     Rock rock = new Rock();
                     grid2.put(loc,rock);
                 }
-                world.show();
             }
         }
-        
+        world = new ActorWorld(grid2);
+        world.show();
     }
 
     /**
