@@ -94,7 +94,7 @@ public class GameOfLife
      * @post    the world has been populated with a new grid containing the next generation
      * 
      */
-    private void createNextGeneration()
+    public void createNextGeneration()
     {
         /** You will need to read the documentation for the World, Grid, and Location classes
          *      in order to implement the Game of Life algorithm and leverage the GridWorld framework.
@@ -105,24 +105,29 @@ public class GameOfLife
         BoundedGrid<Actor> grid2 = new BoundedGrid<Actor>(ROWS, COLS);
         for(int x = 0; x < 20; x++)
         {
-            for(int y = 0; y < 20; x++)
+            for(int y = 0; y < 20; y++)
             {
                 Location loc = new Location(x,y);
                 int neighbors = grid.getNeighbors(loc).size();
-
-                if((neighbors < 2) || (neighbors > 3))
+                if(grid.get(loc) == null)
                 {
-                    grid.remove(loc);
+                    if(neighbors == 3)
+                    {
+                        Rock rock = new Rock();
+                        grid2.put(loc,rock);
+                    }
                 }
                 else
                 {
-                    Rock rock = new Rock();
-                    grid2.put(loc,rock);
+                    if(neighbors == 2 || neighbors == 3)
+                    {
+                        Rock rock = new Rock();
+                        grid2.put(loc,rock);
+                    }
                 }
             }
         }
-        world = new ActorWorld(grid2);
-        world.show();
+        world.setGrid(grid2);
     }
 
     /**
@@ -164,9 +169,14 @@ public class GameOfLife
      * Creates an instance of this class. Provides convenient execution.
      *
      */
-    public static void main(String[] args)
+    public static void main(String[] args) throws InterruptedException
     {
         GameOfLife game = new GameOfLife();
+        for(int i = 0; i < 50; i++)
+        {
+            game.createNextGeneration();
+            Thread.sleep(500);
+        }
     }
 
 }

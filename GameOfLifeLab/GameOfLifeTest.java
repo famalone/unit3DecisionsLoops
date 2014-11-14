@@ -99,7 +99,10 @@ public class GameOfLifeTest
         GameOfLife game = new GameOfLife();
         final int ROWS = game.getNumRows();
         final int COLS = game.getNumCols();
-        
+        for(int i = 0; i < 10; i++)
+        {
+            game.createNextGeneration();
+        }
         for(int row = 0; row < 5; row++)
         {
             for(int col = 0; col < 5; col++)
