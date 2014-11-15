@@ -27,6 +27,15 @@ public class GameOfLife
     private final int X3 = 1, Y3 = 2;
     private final int X4 = 2, Y4 = 1;
     private final int X5 = 2, Y5 = 2;
+    
+    private final int X6 = 9, Y6 = 9;
+    private final int X7 = 9, Y7 = 10;
+    private final int X8 = 10, Y8 = 9;
+    private final int X9 = 10, Y9 = 10;
+    
+    private final int X10 = 7, Y10 = 9;
+    private final int X11 = 7, Y11 = 10;
+    private final int X12 = 7, Y12 = 11;
 
     /**
      * Default constructor for objects of class GameOfLife
@@ -84,6 +93,34 @@ public class GameOfLife
         Rock rock5 = new Rock();
         Location loc5 = new Location(X5,Y5);
         grid.put(loc5, rock5);
+        
+        Rock rock6 = new Rock();
+        Location loc6 = new Location(X6,Y6);
+        grid.put(loc6, rock6);
+        
+        Rock rock7 = new Rock();
+        Location loc7 = new Location(X7,Y7);
+        grid.put(loc7, rock7);
+        
+        Rock rock8 = new Rock();
+        Location loc8 = new Location(X8,Y8);
+        grid.put(loc8, rock8);
+        
+        Rock rock9 = new Rock();
+        Location loc9 = new Location(X9,Y9);
+        grid.put(loc9, rock9);
+        
+        Rock rock10 = new Rock();
+        Location loc10 = new Location(X10,Y10);
+        grid.put(loc10, rock10);
+        
+        Rock rock11 = new Rock();
+        Location loc11 = new Location(X11,Y11);
+        grid.put(loc11, rock11);
+        
+        Rock rock12 = new Rock();
+        Location loc12 = new Location(X12,Y12);
+        grid.put(loc12, rock12);
     }
 
     /**
@@ -172,7 +209,7 @@ public class GameOfLife
     public static void main(String[] args) throws InterruptedException
     {
         GameOfLife game = new GameOfLife();
-        for(int i = 0; i < 50; i++)
+        for(int i = 0; i < 75; i++)
         {
             game.createNextGeneration();
             Thread.sleep(500);
