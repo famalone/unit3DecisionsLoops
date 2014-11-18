@@ -9,15 +9,14 @@ import info.gridworld.grid.Location;
  * Game of Life starter code. Demonstrates how to create and populate the game using the GridWorld framework.
  * Also demonstrates how to provide accessor methods to make the class testable by unit tests.
  * 
- * @author @gcschmit
- * @version 18 July 2014
+ * @author @FinMalone
+ * @version 13 November 2014
  */
 public class GameOfLife
 {
     // the world comprised of the grid that displays the graphics for the game
     private ActorWorld world;
 
-    // the game board will have 5 rows and 5 columns
     private final int ROWS = 20;
     private final int COLS = 20;
 
@@ -72,7 +71,7 @@ public class GameOfLife
         //  (alive cells contains actors; dead cells do not)
         Grid<Actor> grid = world.getGrid();
 
-        // create and add rocks (a type of Actor) to the three intial locations
+        // create and add rocks (a type of Actor) to the intial locations
 
         Rock rock1 = new Rock();
         Location loc1 = new Location(X1,Y1);
@@ -133,10 +132,6 @@ public class GameOfLife
      */
     public void createNextGeneration()
     {
-        /** You will need to read the documentation for the World, Grid, and Location classes
-         *      in order to implement the Game of Life algorithm and leverage the GridWorld framework.
-         */
-
         // create the grid, of the specified size, that contains Actors
         Grid<Actor> grid = world.getGrid();
         BoundedGrid<Actor> grid2 = new BoundedGrid<Actor>(ROWS, COLS);

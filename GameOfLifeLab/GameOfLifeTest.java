@@ -40,6 +40,9 @@ public class GameOfLifeTest
     {
     }
 
+    /**
+     * Checks to see if all initial states are correct for a section of the grid.
+     */
     @Test
     public void testInitialState()
     {
@@ -83,6 +86,9 @@ public class GameOfLifeTest
         }
     }
 
+    /**
+     * Tests for all the cell states in the 5x5 corner of the grid after 10 generations.
+     */
     @Test
     public void testFinalState()
     {
